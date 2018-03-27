@@ -1,11 +1,8 @@
 library(shiny)
 library(data.table)
-# https://mmotoki.shinyapps.io/polynomial_regression_analyzer/
-# http://davmre.github.io/blog/python/2013/12/15/orthogonal_poly
-# https://en.wikipedia.org/wiki/Lagrange_polynomial
 
 # load data
-DT <- fread('data/wages.csv', select=c("experience", "salary"))
+DT <- fread('wages.csv', select=c("experience", "salary"))
 setnames(DT, c("experience", "salary"), c("x", "y"))
 
 # values that change
